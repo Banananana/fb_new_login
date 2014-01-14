@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13A603" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
+    <dependencies>
+        <deployment defaultVersion="1552" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
+    </dependencies>
+    <scenes>
+        <!--LoginVC-->
+        <scene sceneID="5">
+            <objects>
+                <viewController storyboardIdentifier="mainView" id="2" customClass="NHOCLoginVC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="lzM-Nz-wrI"/>
+                        <viewControllerLayoutGuide type="bottom" id="Ouj-Fo-GlJ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="3">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="il3-sJ-OFN">
+                                <rect key="frame" x="69" y="192" width="182" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="182" id="maB-Wx-pOR"/>
+                                </constraints>
+                                <state key="normal" title="Login with Facebook">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="fbLoginButtonTapped:" destination="2" eventType="touchUpInside" id="DUz-ig-Xlh"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ydu-SX-wai">
+                                <rect key="frame" x="69" y="258" width="183" height="30"/>
+                                <state key="normal" title="Login with Google">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="googleLoginButtonTapped:" destination="2" eventType="touchUpInside" id="LTh-zI-EJc"/>
+                                </connections>
+                            </button>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="hVz-6T-MB7">
+                                <rect key="frame" x="150" y="230" width="20" height="20"/>
+                            </activityIndicatorView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="THERE WAS AN ERROR HAHA" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="194" translatesAutoresizingMaskIntoConstraints="NO" id="VH6-2Q-6Kj">
+                                <rect key="frame" x="63" y="89" width="194" height="46"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="46" id="BaL-58-tgP"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="hVz-6T-MB7" firstAttribute="centerY" secondItem="3" secondAttribute="centerY" id="0Ot-W7-qqj"/>
+                            <constraint firstItem="ydu-SX-wai" firstAttribute="top" secondItem="hVz-6T-MB7" secondAttribute="bottom" constant="8" symbolic="YES" id="54o-Ss-hla"/>
+                            <constraint firstItem="VH6-2Q-6Kj" firstAttribute="top" secondItem="3" secondAttribute="top" constant="89" id="EPy-Rc-2Lg"/>
+                            <constraint firstItem="il3-sJ-OFN" firstAttribute="centerX" secondItem="VH6-2Q-6Kj" secondAttribute="centerX" id="P8L-KI-E1U"/>
+                            <constraint firstItem="il3-sJ-OFN" firstAttribute="width" secondItem="ydu-SX-wai" secondAttribute="width" id="P9E-8j-QQh"/>
+                            <constraint firstItem="hVz-6T-MB7" firstAttribute="top" secondItem="il3-sJ-OFN" secondAttribute="bottom" constant="8" symbolic="YES" id="YIy-Y0-qFR"/>
+                            <constraint firstItem="ydu-SX-wai" firstAttribute="leading" secondItem="il3-sJ-OFN" secondAttribute="leading" id="kPI-7i-d3r"/>
+                            <constraint firstItem="hVz-6T-MB7" firstAttribute="centerX" secondItem="il3-sJ-OFN" secondAttribute="centerX" id="nbY-yt-Edc"/>
+                            <constraint firstItem="il3-sJ-OFN" firstAttribute="centerX" secondItem="3" secondAttribute="centerX" id="z9C-bn-cZS"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="spinner" destination="hVz-6T-MB7" id="Kw8-T2-dhi"/>
+                        <outlet property="status" destination="VH6-2Q-6Kj" id="9DN-05-iXo"/>
+                        <segue destination="as1-GE-bjc" kind="modal" identifier="fbLoggedSegue" id="IHJ-Fa-zen"/>
+                        <segue destination="hC7-bd-9UY" kind="modal" identifier="googleLoggedSegue" id="GrG-oV-1Wm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3328" y="-783"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="wxN-6R-2Sq">
+            <objects>
+                <viewController storyboardIdentifier="googleLogged" id="hC7-bd-9UY" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="OrF-b3-YFC"/>
+                        <viewControllerLayoutGuide type="bottom" id="hHb-a3-W0l"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="f7V-5y-g4r">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" misplaced="YES" text="LOGGED WITH GOOGLE!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t4Y-vY-YCf">
+                                <rect key="frame" x="60" y="20" width="200" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Bh-4t-VPL">
+                                <rect key="frame" x="129" y="430" width="63" height="30"/>
+                                <state key="normal" title="LOGOUT">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" misplaced="YES" image="Obama.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="jxd-k6-eaV">
+                                <rect key="frame" x="58" y="49" width="205" height="249"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="249" id="BAj-oW-kco"/>
+                                    <constraint firstAttribute="width" constant="205" id="TpY-wm-Yid"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="t4Y-vY-YCf" firstAttribute="centerX" secondItem="jxd-k6-eaV" secondAttribute="centerX" id="7qe-c1-URh"/>
+                            <constraint firstItem="t4Y-vY-YCf" firstAttribute="top" secondItem="f7V-5y-g4r" secondAttribute="top" constant="20" symbolic="YES" id="GH3-qf-3Gu"/>
+                            <constraint firstItem="jxd-k6-eaV" firstAttribute="centerX" secondItem="f7V-5y-g4r" secondAttribute="centerX" id="RKO-Gy-X5F"/>
+                            <constraint firstAttribute="bottom" secondItem="0Bh-4t-VPL" secondAttribute="bottom" constant="20" symbolic="YES" id="nWu-V2-VUa"/>
+                            <constraint firstItem="jxd-k6-eaV" firstAttribute="top" secondItem="t4Y-vY-YCf" secondAttribute="bottom" constant="8" symbolic="YES" id="pUA-pY-97W"/>
+                            <constraint firstItem="0Bh-4t-VPL" firstAttribute="centerX" secondItem="jxd-k6-eaV" secondAttribute="centerX" id="y2A-Wt-R8a"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2y3-J0-zmW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2594" y="-457"/>
+        </scene>
+        <!--LoggedVC-->
+        <scene sceneID="IaV-7F-3Po">
+            <objects>
+                <viewController storyboardIdentifier="fbLogged" id="as1-GE-bjc" customClass="NHOCLoggedVC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="dDZ-QA-gUR"/>
+                        <viewControllerLayoutGuide type="bottom" id="fcw-5G-sH6"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ahC-E6-nM2">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" misplaced="YES" text="LOGGED WITH FB!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kXN-hJ-Cuw">
+                                <rect key="frame" x="52" y="20" width="217" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="217" id="Pfh-7q-epD"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JBw-0w-mdq">
+                                <rect key="frame" x="129" y="430" width="63" height="30"/>
+                                <state key="normal" title="LOGOUT">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="fbLogoutButtonTapped:" destination="as1-GE-bjc" eventType="touchUpInside" id="ajd-aT-vhE"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" misplaced="YES" image="Obama.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="uJn-i8-Qta">
+                                <rect key="frame" x="58" y="60" width="205" height="249"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="249" id="GA0-i8-VkM"/>
+                                    <constraint firstAttribute="width" constant="205" id="iP0-Dp-UJs"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SEJ-kW-56S">
+                                <rect key="frame" x="58" y="364" width="205" height="30"/>
+                                <state key="normal" title="Tap to post &quot;Hi!&quot;">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="postHiButtonTapped:" destination="as1-GE-bjc" eventType="touchUpInside" id="aV1-W7-rgp"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="SEJ-kW-56S" secondAttribute="bottom" constant="86" id="3iv-w0-6Ka"/>
+                            <constraint firstAttribute="bottom" secondItem="JBw-0w-mdq" secondAttribute="bottom" constant="20" symbolic="YES" id="808-ar-kNU"/>
+                            <constraint firstItem="uJn-i8-Qta" firstAttribute="top" secondItem="ahC-E6-nM2" secondAttribute="top" constant="60" id="AyZ-Ha-Mdd"/>
+                            <constraint firstItem="kXN-hJ-Cuw" firstAttribute="top" secondItem="ahC-E6-nM2" secondAttribute="top" constant="20" symbolic="YES" id="Fdc-BG-PrP"/>
+                            <constraint firstItem="uJn-i8-Qta" firstAttribute="centerX" secondItem="ahC-E6-nM2" secondAttribute="centerX" id="NZr-OQ-dWH"/>
+                            <constraint firstItem="JBw-0w-mdq" firstAttribute="centerX" secondItem="SEJ-kW-56S" secondAttribute="centerX" id="Nge-QL-OpL"/>
+                            <constraint firstItem="SEJ-kW-56S" firstAttribute="trailing" secondItem="uJn-i8-Qta" secondAttribute="trailing" id="TKG-si-vSU"/>
+                            <constraint firstItem="uJn-i8-Qta" firstAttribute="leading" secondItem="SEJ-kW-56S" secondAttribute="leading" id="cUV-ln-Uva"/>
+                            <constraint firstItem="kXN-hJ-Cuw" firstAttribute="centerX" secondItem="uJn-i8-Qta" secondAttribute="centerX" id="jir-T3-QKG"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <segue destination="2" kind="modal" identifier="fbLoginSegue" id="TDU-Vx-yJN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QXg-z6-gOw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2486" y="-1085"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Obama.jpg" width="254" height="303"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination"/>
+    </simulatedMetricsContainer>
+</document>
