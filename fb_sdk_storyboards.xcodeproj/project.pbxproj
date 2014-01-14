@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0404A9DD18846FB900A4D8F7 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0404A9DC18846FB900A4D8F7 /* FacebookSDK.framework */; };
+		0404A9E1188533A300A4D8F7 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0404A9E0188533A300A4D8F7 /* FacebookSDK.framework */; };
+		0404A9E31885361A00A4D8F7 /* fb_sdk_storyboards-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0404A9E21885361A00A4D8F7 /* fb_sdk_storyboards-Info.plist */; };
 		ED14B21A1700AD120071348C /* NHOCLoggedVC.m in Sources */ = {isa = PBXBuildFile; fileRef = ED14B2191700AD120071348C /* NHOCLoggedVC.m */; };
 		ED83FCA116F7E52F00CE2F45 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED83FCA016F7E52F00CE2F45 /* UIKit.framework */; };
 		ED83FCA316F7E52F00CE2F45 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED83FCA216F7E52F00CE2F45 /* Foundation.framework */; };
@@ -27,14 +28,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0404A9DC18846FB900A4D8F7 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = ../../Documents/FacebookSDK/FacebookSDK.framework; sourceTree = "<group>"; };
+		0404A9E0188533A300A4D8F7 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
+		0404A9E21885361A00A4D8F7 /* fb_sdk_storyboards-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "fb_sdk_storyboards-Info.plist"; sourceTree = "<group>"; };
 		ED14B2181700AD120071348C /* NHOCLoggedVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NHOCLoggedVC.h; sourceTree = "<group>"; };
 		ED14B2191700AD120071348C /* NHOCLoggedVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NHOCLoggedVC.m; sourceTree = "<group>"; };
 		ED83FC9D16F7E52F00CE2F45 /* fbsdksb.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = fbsdksb.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED83FCA016F7E52F00CE2F45 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		ED83FCA216F7E52F00CE2F45 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		ED83FCA416F7E52F00CE2F45 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		ED83FCA816F7E52F00CE2F45 /* fb_sdk_storyboards-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "fb_sdk_storyboards-Info.plist"; sourceTree = "<group>"; };
 		ED83FCAA16F7E52F00CE2F45 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		ED83FCAC16F7E52F00CE2F45 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		ED83FCAE16F7E52F00CE2F45 /* fb_sdk_storyboards-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "fb_sdk_storyboards-Prefix.pch"; sourceTree = "<group>"; };
@@ -62,7 +63,7 @@
 				ED83FCCE16F7E6E000CE2F45 /* Social.framework in Frameworks */,
 				ED83FCA116F7E52F00CE2F45 /* UIKit.framework in Frameworks */,
 				ED83FCA316F7E52F00CE2F45 /* Foundation.framework in Frameworks */,
-				0404A9DD18846FB900A4D8F7 /* FacebookSDK.framework in Frameworks */,
+				0404A9E1188533A300A4D8F7 /* FacebookSDK.framework in Frameworks */,
 				ED83FCA516F7E52F00CE2F45 /* CoreGraphics.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -90,7 +91,7 @@
 		ED83FC9F16F7E52F00CE2F45 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				0404A9DC18846FB900A4D8F7 /* FacebookSDK.framework */,
+				0404A9E0188533A300A4D8F7 /* FacebookSDK.framework */,
 				ED83FCC916F7E6E000CE2F45 /* Accounts.framework */,
 				ED83FCCA16F7E6E000CE2F45 /* AdSupport.framework */,
 				ED83FCCB16F7E6E000CE2F45 /* Social.framework */,
@@ -119,7 +120,7 @@
 				ED9ABE9717011B22003DE954 /* Assets */,
 				ED83FCAF16F7E52F00CE2F45 /* NHOCAppDelegate.h */,
 				ED83FCB016F7E52F00CE2F45 /* NHOCAppDelegate.m */,
-				ED83FCA816F7E52F00CE2F45 /* fb_sdk_storyboards-Info.plist */,
+				0404A9E21885361A00A4D8F7 /* fb_sdk_storyboards-Info.plist */,
 				ED83FCA916F7E52F00CE2F45 /* InfoPlist.strings */,
 				ED83FCAC16F7E52F00CE2F45 /* main.m */,
 				ED83FCAE16F7E52F00CE2F45 /* fb_sdk_storyboards-Prefix.pch */,
@@ -219,6 +220,7 @@
 				ED83FCAB16F7E52F00CE2F45 /* InfoPlist.strings in Resources */,
 				ED83FCB316F7E52F00CE2F45 /* Default.png in Resources */,
 				ED83FCB516F7E52F00CE2F45 /* Default@2x.png in Resources */,
+				0404A9E31885361A00A4D8F7 /* fb_sdk_storyboards-Info.plist in Resources */,
 				ED83FCB716F7E52F00CE2F45 /* Default-568h@2x.png in Resources */,
 				ED83FCBA16F7E52F00CE2F45 /* MainStoryboard.storyboard in Resources */,
 				ED83FD0C16FCB19C00CE2F45 /* Obama.jpg in Resources */,
@@ -323,7 +325,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\\\"$(SRCROOT)/../../../../../FacebookSDK\\\"",
-					/Users/mac/Documents/FacebookSDK,
+					"/Users/mac/Desktop/fb-sdk-storyboards-master",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "nhoctestapp/fb_sdk_storyboards-Prefix.pch";
@@ -343,7 +345,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\\\"$(SRCROOT)/../../../../../FacebookSDK\\\"",
-					/Users/mac/Documents/FacebookSDK,
+					"/Users/mac/Desktop/fb-sdk-storyboards-master",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "nhoctestapp/fb_sdk_storyboards-Prefix.pch";

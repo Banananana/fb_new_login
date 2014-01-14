@@ -83,12 +83,5 @@
 
 #pragma mark - Google Stuff
 
-- (IBAction)googleLoginButtonTapped:(id)sender
-{
-    NSLog(@"googleLoginButtonTapped: in NHOCLoginVC");
-    //
-    // TODO
-    //
-}
 
 @end
